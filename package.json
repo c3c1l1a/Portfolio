@@ -1,7 +1,8 @@
 {
   "name": "Portfolio",
   "scripts": {
-    "start": "katnip start"
+    "start": "katnip start",
+    "build": "npx tailwindcss -i ./src/main.css -o ./public/output.css --watch"
   },
   "dependencies": {
     "katnip": "^0.0.54",
@@ -14,5 +15,8 @@
     "node": ">=16.x"
   },
   "plugins": [],
-  "theme": null
+  "theme": null,
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  }
 }

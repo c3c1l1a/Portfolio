@@ -27,6 +27,7 @@ katnip.addTemplate("**",({children})=>{
   console.log(menu);
   return (
   	<div>
+  		<link href="/public/main.css" rel="stylesheet" />
   		hello... {children}
   	</div>
   );
