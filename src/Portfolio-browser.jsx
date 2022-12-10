@@ -22,12 +22,13 @@ import {katnip} from "katnip";
 // to customize the client side behaivour.
 // katnip.addAction(/*...*/);
 
+import Menu from './components/menu/menu';
+
 katnip.addTemplate("**",({children})=>{
-  let menu=katnip.useChannel("menuHeader");
-  console.log(menu);
   return (
-  	<div>
-  		<link href="/public/main.css" rel="stylesheet" />
+  	<div className="PF-main">
+  		<link href="output.css" rel="stylesheet" />
+  		<Menu />
   		hello... {children}
   	</div>
   );

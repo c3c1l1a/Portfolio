@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.PF-menu {
+	@apply h-screen flex flex-col justify-center items-center gap-5;
+	background-image: url("static_images/image_geometry_menu_1.png"), 
+					  url("static_images/image_geometry_menu_2.png");
+	background-position: left top, bottom left;
+	background-size: 80%, contain;
+	background-repeat: no-repeat;
+}
+
+.menu-close-icon {
+	@apply absolute top-6 right-6
+}
+
+
+
