@@ -513,6 +513,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.static {
+  position: static;
+}
+
 .PF-menu {
   position: relative;
   display: flex;
@@ -523,20 +527,15 @@ video {
   gap: 1.25rem;
 }
 
-.PF-menu::after {
-  content: "";
-  background-image: url("static_images/image_geometry_menu_1.png"), 
-					  url("static_images/image_geometry_menu_2.png");
-  background-position: left top, bottom left;
-  background-size: 80%, contain;
-  background-repeat: no-repeat;
-  opacity: 0.5;
-  top:  0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  z-index: -1;
+@media (min-width: 768px) {
+  .PF-menu {
+    height: 4rem;
+    flex-direction: row;
+    gap: 2.5rem;
+    --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
 }
 
 .menu-close-icon {
@@ -544,6 +543,14 @@ video {
   top: 1.5rem;
   right: 1.5rem;
 }
+
+@media (min-width: 768px) {
+  .menu-close-icon {
+    display: none;
+  }
+}
+
+
 
 
 
