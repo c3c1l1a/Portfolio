@@ -29,7 +29,7 @@ class Project extends Model {
 katnip.addModel(Project);
 katnip.createCrudApi(Project);
 
-katnip.addApi("/api/getProjects",async ({},req)=>{
+katnip.addApi("/api/getProjects",async ({})=>{
 	let projects=await Project.findMany();
 
 	return projects;
