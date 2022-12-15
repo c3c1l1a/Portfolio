@@ -1,4 +1,4 @@
-import {katnip} from "katnip";
+import {katnip, useApiFetch} from "katnip";
 
 // This file will be run in the browser.
 // Here we do things like:
@@ -24,11 +24,29 @@ import {katnip} from "katnip";
 
 import Menu from './components/menu/menu';
 
+function ProjectList() {
+	let projects=useApiFetch("/api/getProjects");
+	console.log(projects);
+
+
+	if (!projects)
+		return "Loading...";
+
+	console.log("return prjs...");
+
+  return (<div>
+  	{projects.map((project)=>
+  		<h1>{project.title}</h1>
+  	)}
+  </div>);
+}
+
 katnip.addTemplate("**",({children})=>{
   return (
   	<div className="PF-main">
   		<link href="output.css" rel="stylesheet" />
   		<Menu />
+  		<ProjectList />
   		hello... {children}
   	</div>
   );
@@ -40,3 +58,13 @@ katnip.addAction("getMenuLocations",(items)=>{
 		setting: "menuHeader"
 	});
 })
+
+katnip.createCrudUi("project",{
+	columns:{
+		title: {label: "Project Title"}
+	},
+  fields: {
+    title: {label: "Project Title"},
+    description: {label: "Description", type: "textarea"}
+  }
+});

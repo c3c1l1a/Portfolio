@@ -514,17 +514,29 @@ video {
 }
 
 .PF-menu {
+  position: relative;
   display: flex;
   height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1.25rem;
+}
+
+.PF-menu::after {
+  content: "";
   background-image: url("static_images/image_geometry_menu_1.png"), 
 					  url("static_images/image_geometry_menu_2.png");
   background-position: left top, bottom left;
   background-size: 80%, contain;
   background-repeat: no-repeat;
+  opacity: 0.5;
+  top:  0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 .menu-close-icon {

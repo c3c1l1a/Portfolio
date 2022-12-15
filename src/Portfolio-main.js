@@ -1,4 +1,4 @@
-import {katnip} from "katnip";
+import {katnip, Model} from "katnip";
 
 // This file will be run on the server.
 // Here we do things like:
@@ -17,3 +17,20 @@ import {katnip} from "katnip";
 // katnip.addAction(/*...*/);
 
 katnip.addSetting("menuHeader",{session: true});
+
+class Project extends Model {
+	static fields={
+    id: "integer not null auto_increment primary key",
+    title: "text",
+    description: "text"
+	};
+}
+
+katnip.addModel(Project);
+katnip.createCrudApi(Project);
+
+katnip.addApi("/api/getProjects",async ({},req)=>{
+	let projects=await Project.findMany();
+
+	return projects;
+});
