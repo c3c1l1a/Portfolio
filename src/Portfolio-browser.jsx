@@ -26,8 +26,6 @@ import Menu from './components/menu/menu';
 
 function ProjectList() {
 	let projects=useApiFetch("/api/getProjects");
-	console.log(projects);
-
 
 	if (!projects)
 		return "Loading...";
@@ -42,10 +40,11 @@ function ProjectList() {
 }
 
 katnip.addTemplate("**",({children})=>{
+	let menuInfo = katnip.useChannel("menuHeader");
   return (
   	<div className="PF-main">
   		<link href="output.css" rel="stylesheet" />
-  		<Menu />
+  		<Menu menuInfo={menuInfo}/>
   		<ProjectList />
   		hello... {children}
   	</div>

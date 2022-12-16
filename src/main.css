@@ -2,16 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.PF-menu {
-	@apply h-screen flex flex-col justify-center items-center gap-5 relative
-	md:h-16 md:flex-row md:shadow-sm md:gap-10;
-}
-
-.menu-close-icon {
-	@apply absolute top-6 right-6 
+.menu-humburger-icon {
+	@apply absolute top-6 right-6
 	md:hidden;
 }
+
+.menu-mobile {
+	@apply h-screen flex flex-col justify-center items-center gap-5 relative;
+}
+
+.menu-mobile-hidden {
+	@apply hidden
+}
+
+.menu-desktop {
+	@apply h-16 flex flex-row justify-center items-center gap-10 shadow-sm;
+}
+
+.humburgerIcon-hidden {
+	@apply hidden
+}
+
+.closeIcon-hidden {
+	@apply hidden
+}
+
+.menu-items-hidden {
+	@apply hidden
+}
+
+.closeIcon-hidden {
+	@apply hidden
+}
+.menu-close-icon {
+	@apply absolute top-6 right-6
+	md:hidden;
+}
+/*
+
+.menu-hidden {
+	display: none;
+}*/
 
 
 

@@ -517,7 +517,19 @@ video {
   position: static;
 }
 
-.PF-menu {
+.menu-humburger-icon {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .menu-humburger-icon {
+    display: none;
+  }
+}
+
+.menu-mobile {
   position: relative;
   display: flex;
   height: 100vh;
@@ -527,15 +539,36 @@ video {
   gap: 1.25rem;
 }
 
-@media (min-width: 768px) {
-  .PF-menu {
-    height: 4rem;
-    flex-direction: row;
-    gap: 2.5rem;
-    --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  }
+.menu-mobile-hidden {
+  display: none;
+}
+
+.menu-desktop {
+  display: flex;
+  height: 4rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.humburgerIcon-hidden {
+  display: none;
+}
+
+.closeIcon-hidden {
+  display: none;
+}
+
+.menu-items-hidden {
+  display: none;
+}
+
+.closeIcon-hidden {
+  display: none;
 }
 
 .menu-close-icon {
@@ -549,6 +582,12 @@ video {
     display: none;
   }
 }
+
+/*
+
+.menu-hidden {
+	display: none;
+}*/
 
 
 

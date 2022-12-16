@@ -2,7 +2,7 @@
   "name": "Portfolio",
   "scripts": {
     "start": "katnip start",
-    "build": "npx tailwindcss -i ./src/main.css -o ./public/output.css --watch"
+    "build": "npx tailwindcss -i ./src/main.css -o ./public/output.css --watch && npx eslint . --fix"
   },
   "dependencies": {
     "katnip": "^0.0.54",
