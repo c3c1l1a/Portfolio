@@ -22,7 +22,8 @@ import {katnip, useApiFetch} from "katnip";
 // to customize the client side behaivour.
 // katnip.addAction(/*...*/);
 
-import Menu from './components/menu/menu';
+import Menu from './components/menu';
+import Banner from './components/banner';
 
 function ProjectList() {
 	let projects=useApiFetch("/api/getProjects");
@@ -45,6 +46,7 @@ katnip.addTemplate("**",({children})=>{
   	<div className="PF-main">
   		<link href="output.css" rel="stylesheet" />
   		<Menu menuInfo={menuInfo}/>
+  		<Banner />
   		<ProjectList />
   		hello... {children}
   	</div>

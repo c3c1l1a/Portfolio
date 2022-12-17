@@ -1,7 +1,7 @@
 import {katnip} from "katnip";
 import { useState, useEffect } from "react";
-import closeIconImg from "../../images/icons/ic_close.svg";
-import humburgerIconImg from "../../images/icons/ic_humburger.svg";
+import closeIconImg from "../images/icons/ic_close.svg";
+import humburgerIconImg from "../images/icons/ic_humburger.svg";
 
 const Menu = ({ menuInfo }) => {
 	let [menuState, setMenuState] = useState();
@@ -38,7 +38,7 @@ const Menu = ({ menuInfo }) => {
 	const closeMenu = () => {
 		setMenuState({
 			device:"menu-mobile-hidden",
-			humburgerIcon: "block",
+			humburgerIcon: "menu-humburger-icon",
 			menuItems: "menu-items-hidden",
 			closeIcon: "closeIcon-hidden",
 		});
@@ -62,8 +62,6 @@ const Menu = ({ menuInfo }) => {
 	} else {
 		return (<div></div>);
 	}
-
-	
 }
 
 export default Menu;
