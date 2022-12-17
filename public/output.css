@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 /*
 ! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com
 */
@@ -43,7 +47,7 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Poppins, sans-serif;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -419,7 +423,7 @@ video {
   display: none;
 }
 
-*, ::before, ::after {
+*, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -466,7 +470,7 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-::backdrop {
+::backdrop{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -513,23 +517,23 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.static {
+.static{
   position: static;
 }
 
-.menu-humburger-icon {
+.menu-humburger-icon{
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
 }
 
-@media (min-width: 768px) {
-  .menu-humburger-icon {
+@media (min-width: 768px){
+  .menu-humburger-icon{
     display: none;
   }
 }
 
-.menu-mobile {
+.menu-mobile{
   position: relative;
   display: flex;
   height: 100vh;
@@ -539,11 +543,11 @@ video {
   gap: 1.25rem;
 }
 
-.menu-mobile-hidden {
+.menu-mobile-hidden{
   display: none;
 }
 
-.menu-desktop {
+.menu-desktop{
   display: flex;
   height: 4rem;
   flex-direction: row;
@@ -555,39 +559,35 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.humburgerIcon-hidden {
+.humburgerIcon-hidden{
   display: none;
 }
 
-.closeIcon-hidden {
+.closeIcon-hidden{
   display: none;
 }
 
-.menu-items-hidden {
+.menu-items-hidden{
   display: none;
 }
 
-.closeIcon-hidden {
+.closeIcon-hidden{
   display: none;
 }
 
-.menu-close-icon {
+.menu-close-icon{
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
 }
 
-@media (min-width: 768px) {
-  .menu-close-icon {
+@media (min-width: 768px){
+  .menu-close-icon{
     display: none;
   }
 }
 
-/*
 
-.menu-hidden {
-	display: none;
-}*/
 
 
 
