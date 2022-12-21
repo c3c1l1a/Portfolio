@@ -53,15 +53,15 @@
 }
 .profilePic {
 	@apply hidden md:flex md:items-center relative
-	md:w-4/12
+	md:w-4/12 
 }
 
 .profilePic img {
-	@apply w-7/12 absolute -left-36
+	@apply w-7/12 absolute -left-36 
 }
 
 .CTA-container {
-	@apply h-screen bg-tartiary flex justify-center items-center md:w-8/12
+	@apply h-screen bg-tartiary flex justify-center items-center md:w-8/12 shadow-md
 }
 
 .CTA {

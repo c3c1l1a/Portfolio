@@ -24,21 +24,7 @@ import {katnip, useApiFetch} from "katnip";
 
 import Menu from './components/menu';
 import Banner from './components/banner';
-
-function ProjectList() {
-	let projects=useApiFetch("/api/getProjects");
-
-	if (!projects)
-		return "Loading...";
-
-	console.log("return prjs...");
-
-  return (<div>
-  	{projects.map((project)=>
-  		<h1>{project.title}</h1>
-  	)}
-  </div>);
-}
+import ProjectList from './components/projectsList';
 
 katnip.addTemplate("**",({children})=>{
 	let menuInfo = katnip.useChannel("menuHeader");
