@@ -5,6 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Menu styles */
+.PF-menu-container {
+	@apply bg-white md:bg-transparent absolute top-0 left-0 w-full h-fit md:flex md:justify-end;
+}
 .menu-humburger-icon {
 	@apply absolute top-6 right-6
 	md:hidden;
@@ -19,7 +23,7 @@
 }
 
 .menu-desktop {
-	@apply h-16 flex flex-row justify-center items-center gap-10 shadow-sm;
+	@apply h-16 flex flex-row justify-center items-center gap-14 w-8/12 text-xl;
 }
 
 .humburgerIcon-hidden {
@@ -41,6 +45,63 @@
 	@apply absolute top-6 right-6
 	md:hidden;
 }
+
+/* Banner styles */
+.banner {
+	@apply flex flex-col md:p-0 h-screen 
+	md:flex-row;
+}
+.profilePic {
+	@apply hidden md:flex md:items-center relative
+	md:w-4/12
+}
+
+.profilePic img {
+	@apply w-7/12 absolute -left-36
+}
+
+.CTA-container {
+	@apply h-screen bg-tartiary flex justify-center items-center md:w-8/12
+}
+
+.CTA {
+	@apply flex flex-col p-6 pt-32 gap-8 md:h-fit md:w-1/2;
+	md:gap-8
+}
+
+
+.header {
+	@apply font-fairDisplay text-6xl md:text-8xl;
+}
+
+.tag-line {
+	@apply text-xl md:text-2xl;
+}
+
+.PF-button-primary {
+	@apply bg-primary text-white p-3 font-thin text-xl hover:bg-secondary
+	md:w-2/3 ;
+}
+
+.social-icons {
+	@apply flex gap-5;
+}
+
+.social-icons a {
+	@apply hover:stroke-secondary;
+}
+
+.social-icons img {
+	@apply w-6 h-6;
+}
+
+.social-icons img:hover {
+	filter: invert(50%) sepia(26%) saturate(1547%) hue-rotate(308deg) brightness(87%) contrast(105%);
+}
+
+
+
+
 
 
 

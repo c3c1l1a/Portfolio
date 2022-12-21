@@ -3,7 +3,7 @@ import ProfilePic from './profile-pic';
 
 const Banner = () => {
 	return (
-		<div>
+		<div className="banner">
 			<CTA />
 			<ProfilePic />
 		</div>

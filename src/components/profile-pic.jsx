@@ -1,7 +1,7 @@
 const ProfilePic = () => {
 	return (
-		<div>
-			<p>Profile pic will go here</p>
+		<div className="profilePic">
+			<img src="profile-pic.png" className="" alt="Profile picture"/>
 		</div>
 	)
 }
