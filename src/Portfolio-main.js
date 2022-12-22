@@ -1,4 +1,4 @@
-import {katnip, Model} from "katnip";
+import { katnip, Model } from 'katnip';
 
 // This file will be run on the server.
 // Here we do things like:
@@ -16,24 +16,24 @@ import {katnip, Model} from "katnip";
 // to customize the server side behaivour.
 // katnip.addAction(/*...*/);
 
-katnip.addSetting("menuHeader",{session: true});
+katnip.addSetting('menuHeader', { session: true });
 
 class Project extends Model {
-	static fields={
-    id: "integer not null auto_increment primary key",
-    title: "text",
-    description: "text",
-    tags: "text",
-    img: "integer",
-    links: "text"
-	};
+  static fields={
+    id: 'integer not null auto_increment primary key',
+    title: 'text',
+    description: 'text',
+    tags: 'text',
+    img: 'integer',
+    links: 'text',
+  };
 }
 
 katnip.addModel(Project);
 katnip.createCrudApi(Project);
 
-katnip.addApi("/api/getProjects",async ({})=>{
-	let projects=await Project.findMany();
+katnip.addApi('/api/getProjects', async () => {
+  const projects = await Project.findMany();
 
-	return projects;
+  return projects;
 });
