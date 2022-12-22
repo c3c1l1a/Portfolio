@@ -5,7 +5,7 @@
     "build": "npx tailwindcss -i ./src/main.css -o ./public/output.css --watch && npx eslint . --fix"
   },
   "dependencies": {
-    "katnip": "^0.0.54",
+    "katnip": "^0.0.57",
     "sqlite3": "^5.1.2"
   },
   "main": "src/Portfolio-main.js",

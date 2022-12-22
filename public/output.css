@@ -639,6 +639,7 @@ video {
 .profilePic img{
   position: absolute;
   left: -9rem;
+  display: none;
   width: 58.333333%;
 }
 

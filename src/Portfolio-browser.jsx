@@ -1,4 +1,5 @@
 import {katnip, useApiFetch} from "katnip";
+import { MediaSelect } from "../node_modules/katnip/packages/katnip-media/components/MediaSelect";
 
 // This file will be run in the browser.
 // Here we do things like:
@@ -34,7 +35,7 @@ katnip.addTemplate("**",({children})=>{
   		<Menu menuInfo={menuInfo}/>
   		<Banner />
   		<ProjectList />
-  		hello... {children}
+  		{children}
   	</div>
   );
 });
@@ -46,12 +47,26 @@ katnip.addAction("getMenuLocations",(items)=>{
 	});
 })
 
+function MyControl(props) {
+  function onClick(e) {
+//  	e.stopPropagation();
+//  	e.preventDefault();
+  	console.log(e);
+  }
+
+	return <button type="button" onclick={onClick}>hello</button>;
+//	return MediaSelect(props);
+}
+
 katnip.createCrudUi("project",{
 	columns:{
 		title: {label: "Project Title"}
 	},
   fields: {
     title: {label: "Project Title"},
-    description: {label: "Description", type: "textarea"}
+    description: {label: "Description", type: "textarea"},
+    tags: {label: "Project Tags (comma separated)"},
+    img: {label: "Upload Image", type: MediaSelect}, 
+    links: {label: "Links to project"}
   }
 });

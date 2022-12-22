@@ -57,7 +57,7 @@
 }
 
 .profilePic img {
-	@apply w-7/12 absolute -left-36 
+	@apply w-7/12 absolute -left-36 hidden
 }
 
 .CTA-container {

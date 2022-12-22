@@ -6,6 +6,7 @@ const ProjectList = () => {
 	if (!projects)
 		return 'Loading...';
 
+	console.log(projects);
 
 	return (
 		<div>
@@ -13,19 +14,15 @@ const ProjectList = () => {
 			{projects.map((project)=>{
 				return (
 					<div>
-						<img src={`${project.img}`} alt="Porject image"/>
+						<img src={`/${project.img}`} alt="Porject image"/>
 						<div>
 							<h2>{project.title}</h2>
 							<p>{project.description}</p>
 							<ul>
-								{project.tags.map((tag)=>{
-									return (<li>{tag}</li>);
-								})}
+								{project.tags}
 							</ul>
 							<ul>
-								{project.links.map((link)=>{
-									return (<li><a href={`${link.src}`}>{link.name}</a></li>);
-								})}
+								{project.links}
 							</ul>
 						</div>
 					</div>

@@ -22,7 +22,10 @@ class Project extends Model {
 	static fields={
     id: "integer not null auto_increment primary key",
     title: "text",
-    description: "text"
+    description: "text",
+    tags: "text",
+    img: "integer",
+    links: "text"
 	};
 }
 
