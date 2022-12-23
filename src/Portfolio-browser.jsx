@@ -27,7 +27,21 @@ katnip.addAction("getMenuLocations",(items)=>{
 
 
 
+function ProjectLinks({value, onchange}){
+if (!value)
+	value=[];
 
+function onAdd() {
+	onchange([...value,""]);
+}
+
+return (<>
+	<button type="button" onclick={onAdd}>Add</button>
+  {value.map(v=>
+  	<input type="text" value={v}/>
+  )}
+</>);
+}
 
 katnip.createCrudUi("project",{
 	columns:{
@@ -38,6 +52,6 @@ katnip.createCrudUi("project",{
     description: {label: "Description", type: "textarea"},
     tags: {label: "Project Tags (comma separated)"},
     img: {label: "Upload Image", type: MediaSelect}, 
-    links: {label: "Links to project"}
+    links: {label: "Links to project", type: ProjectLinks}
   }
 });

@@ -6,29 +6,30 @@ const ProjectList = () => {
 	if (!projects)
 		return 'Loading...';
 
-	console.log(projects);
-
 	return (
-		<div>
-			<header>Featured projects</header>
-			{projects.map((project)=>{
+		<div className="projects-section">
+			<h2 class="projects-section-header">Featured Projects</h2>
+			{projects.map((project, index)=>{
 				return (
-					<div>
+					<div className="project-card">
 						<img src={`/${project.img}`} alt="Porject image"/>
-						<div>
-							<h2>{project.title}</h2>
-							<p>{project.description}</p>
-							<ul>
-								{project.tags}
+						<div className="project-info">
+							<p className="project-num">{(index + 1).toString().padStart(2, "0")}.</p>
+							<h3 className="project-name">{project.title}</h3>
+							<p className="project-decription">{project.description}</p>
+							<ul className="project-tags">
+								{project.tags.split(',').map((tag)=>{
+									return (<li>{tag}</li>);
+								})}
 							</ul>
 							<ul>
-								{project.links}
+								<li>Github</li>
+								<li>Live link</li>
 							</ul>
 						</div>
 					</div>
 				);
 			})}
-
 		</div>
 	)
 }

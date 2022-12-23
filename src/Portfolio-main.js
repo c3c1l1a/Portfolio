@@ -25,7 +25,7 @@ class Project extends Model {
     description: 'text',
     tags: 'text',
     img: 'integer',
-    links: 'text',
+    links: 'json',
   };
 }
 

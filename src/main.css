@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -10,12 +10,12 @@
 	@apply bg-white md:bg-transparent absolute top-0 left-0 w-full h-fit md:flex md:justify-end;
 }
 .menu-humburger-icon {
-	@apply absolute top-6 right-6
+	@apply absolute top-6 right-6 hidden
 	md:hidden;
 }
 
 .menu-mobile {
-	@apply h-screen flex flex-col justify-center items-center gap-5 relative;
+	@apply h-screen flex flex-col justify-center items-center gap-5 relative hidden;
 }
 
 .menu-mobile-hidden {
@@ -48,7 +48,7 @@
 
 /* Banner styles */
 .banner {
-	@apply flex flex-col md:p-0 h-screen 
+	@apply flex flex-col md:p-0 h-screen hidden
 	md:flex-row;
 }
 .profilePic {
@@ -71,7 +71,7 @@
 
 
 .header {
-	@apply font-fairDisplay text-6xl md:text-8xl;
+	@apply text-6xl md:text-8xl;
 }
 
 .tag-line {
@@ -97,6 +97,54 @@
 
 .social-icons img:hover {
 	filter: invert(50%) sepia(26%) saturate(1547%) hue-rotate(308deg) brightness(87%) contrast(105%);
+}
+
+
+/* Projects section */
+.projects-section {
+	@apply bg-gray10 py-20 flex flex-col gap-10 px-5 items-center
+}
+.projects-section-header {
+	@apply font-roboto text-gray01 text-3xl font-bold tracking-widest relative
+}
+
+.projects-section-header::after {
+	@apply bg-primary5;
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: -20px;
+	width: 30%;
+	height: 0.25rem;
+	transform: translate(-50%);
+}
+
+.project-card {
+	@apply bg-white flex flex-col gap-5
+}
+
+.project-tags {
+	@apply flex gap-1 flex-wrap
+}
+
+.project-tags li {
+	@apply bg-gray09 py-1 px-3 rounded uppercase font-light text-sm text-gray05
+}
+
+.project-info {
+	@apply flex flex-col gap-5 px-5
+}
+
+.project-num {
+	@apply text-primary5 text-xl
+}
+
+.project-name {
+	@apply text-gray01 text-3xl
+}
+
+.project-decription {
+	@apply text-gray01 font-opensans text-gray03 tracking-wider
 }
 
 
